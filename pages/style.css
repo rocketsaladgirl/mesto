@@ -118,6 +118,7 @@
 /*Основной код для разрешения 1280px*/
 .header__line {
     width: 100%;
+    max-width: 880px;
     height: 0px;
     margin: 0px;
     box-sizing: border-box;
@@ -125,10 +126,345 @@
   }
   
   /*Расширение от 1024px до 1280px*/
+  @media screen and (max-width: 1024px) {
+    .header__line {
+      max-width: 928px;
+    }
+  } 
   
   /*Расширение от 768px до 1024px*/
   
   /*Расширение от 320px до 768px*/
+
+
+/*Блок content, секция profile*/
+/*Основной код для разрешения 1280px*/
+.profile {
+    width: 100%;
+    max-width: 880px;
+    margin: 0 auto;
+    margin-bottom: 51px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    border: 1px solid red;
+  }
+  
+  /*Расширение от 1024px до 1280px*/
+  
+  /*Расширение от 768px до 1024px*/
+  @media screen and (max-width: 973px) {
+    .profile {
+      width: 100%;
+      max-width: 720px;
+    }
+  } 
+  
+  /*Расширение от 320px до 768px*/
+  @media screen and (max-width: 661px) {
+    .profile {
+      width: 88.13%;
+      max-width: 282px;
+      margin-bottom: 36px;
+      flex-direction: column;
+      align-items: center;
+    }
+  }  
+
+/*Блок content, секция profile profile info*/
+/*Основной код для разрешения 1280px*/
+.profile__info {
+    display: flex;
+    flex-direction: row;
+    /*justify-content: space-between;*/
+    align-items: center;
+    box-sizing: border-box;
+    border: 1px solid yellow;
+  }
+  
+  /*Расширение от 1024px до 1280px*/
+  
+  /*Расширение от 768px до 1024px*/
+  
+  /*Расширение от 320px до 768px*/
+  @media screen and (max-width: 661px) {
+    .profile__info {
+      width: 100%;  
+      flex-direction: column;
+      align-items: center;
+    }
+  }   
+
+/*Блок content, секция profile profile avatar*/
+/*Основной код для разрешения 1280px*/
+.profile__avatar {
+    width: 120px;
+    height: 120px;
+    margin-right: 30px;
+    border-radius: 50%;
+    border: 1px solid yellow;
+  }
+  
+  /*Расширение от 1024px до 1280px*/
+  
+  /*Расширение от 768px до 1024px*/
+  
+  /*Расширение от 320px до 768px*/
+  @media screen and (max-width: 661px) {
+    .profile__avatar {
+        margin: 0 auto;
+        margin-bottom: 26px;
+    }
+  }  
+
+/*Блок content, секция profile profile user-block*/
+/*Основной код для разрешения 1280px*/
+.profile__user-block {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid yellow;
+  }
+  
+  /*Расширение от 1024px до 1280px*/
+  
+  /*Расширение от 768px до 1024px*/
+  
+  /*Расширение от 320px до 768px*/
+  @media screen and (max-width: 661px) {
+    .profile__user-block {
+        width: 100%;
+        align-items: center;
+    }
+  }   
+
+/*Блок content, секция profile profile edit-button*/
+/*Основной код для разрешения 1280px*/
+.profile__edit-button {
+    width: 24px;
+    height: 24px;
+    box-sizing: border-box;
+    background: #000000 url(../images/logo/pen_icon.svg) no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 26px;
+    right: -42px;
+    border: 1px solid #FFFFFF;
+    cursor: pointer;
+  }
+  
+  /*Расширение от 1024px до 1280px*/
+  
+  /*Расширение от 768px до 1024px*/
+  
+  /*Расширение от 320px до 768px*/
+  @media screen and (max-width: 661px) {
+    .profile__edit-button {
+        width: 18px;
+        height: 18px;
+        top: 8px;
+        right: 19px;
+    }  
+  }  
+  
+  
+/*Блок content, секция profile profile name*/
+/*Основной код для разрешения 1280px*/
+.profile__name {
+    margin: 0px;
+    margin-bottom: 16px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 42px;
+    line-height: 48px;
+    font-weight: 500;
+    border: 1px solid yellow;
+  }
+  
+  /*Расширение от 1024px до 1280px*/
+  
+  /*Расширение от 768px до 1024px*/
+  @media screen and (max-width: 661px) {
+    .profile__name {
+        margin: 0px;
+        margin-bottom: 14px;
+        font-size: 27px;
+        line-height: 32.68px;
+        text-align: center;
+    }
+  }  
+  
+  /*Расширение от 320px до 768px*/
+  
+
+/*Блок content, секция profile profile edit-description*/
+/*Основной код для разрешения 1280px*/
+.profile__description {
+    margin: 0px;
+    font-size: 18px;
+    line-height: 21.78px;
+    font-weight: 400;
+    text-align: left;
+  }
+  
+  /*Расширение от 1024px до 1280px*/
+  
+  /*Расширение от 768px до 1024px*/
+  
+  /*Расширение от 320px до 768px*/
+  @media screen and (max-width: 661px) {
+    .profile__description {
+        font-size: 14px;
+        line-height: 16.94px;
+        text-align: center;
+    }  
+  }
+
+/*Блок content, секция profile profile add-button*/
+/*Основной код для разрешения 1280px*/
+.profile__add-button {
+    width: 150px;
+    height: 50px;
+    margin-top: 35px;
+    background: url(../images/logo/plus_icon.svg) no-repeat;
+    background-position: center;
+    box-sizing: border-box;
+    border: 2px solid #FFFFFF;
+    cursor: pointer;
+  }
+  
+  /*Расширение от 1024px до 1280px*/
+  
+  /*Расширение от 768px до 1024px*/
+  
+  /*Расширение от 320px до 768px*/
+  @media screen and (max-width: 661px) {
+    .profile__add-button {
+        width: 100%;
+    }  
+  }
+
+
+/*Блок content, секция elements*/
+/*Основной код для разрешения 1280px*/
+.elements {
+    width: 68.75%;
+    max-width: 880px;
+    margin: 0 auto;
+    margin-bottom: 67px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(auto, 282px));
+    grid-template-rows: repeat(2, minmax(auto, 361px));
+    column-gap: 17px;
+    row-gap: 20px;
+    box-sizing: border-box;
+    border: 1px solid red;
+  }
+  
+  /*Расширение от 1024px до 1280px*/
+  @media screen and (max-width: 1279px) {
+    .elements {
+        width: max-content;
+        grid-template-columns: repeat(2, minmax(auto, 282px));
+        grid-template-rows: repeat(2, minmax(auto, 361px));
+    }   
+ }
+  
+  /*Расширение от 768px до 1024px*/
+
+  
+  /*Расширение от 320px до 768px*/
+  @media screen and (max-width: 661px) {
+    .elements {
+        width: 88.13%;
+        max-width: 282px;
+        margin-bottom: 48px;
+        grid-template-columns: 282px;
+        grid-template-rows: repeat(6, minmax(auto, 361px));
+        row-gap: 20px;
+    }  
+  }  
+  
+
+/*Блок content, секция element element*/
+/*Основной код для разрешения 1280px*/
+.element {
+    width: 100%;
+    max-width: 282px;
+    display: flex;
+    flex-direction: column;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    box-sizing: border-box;
+  }
+  
+  /*Расширение от 1024px до 1280px*/
+  
+  /*Расширение от 768px до 1024px*/
+  
+  /*Расширение от 320px до 768px*/
+
+
+/*Блок content, секция element element*/
+/*Основной код для разрешения 1280px*/
+.element__image {
+    width: 282px;
+    height: 282px;
+    margin-bottom: 25px;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    box-sizing: border-box;
+  }
+  
+  /*Расширение от 1024px до 1280px*/
+  
+  /*Расширение от 768px до 1024px*/
+  
+  /*Расширение от 320px до 768px*/  
+
+.element__description {
+    margin: 0px 31px 32px 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid red;
+}  
+
+  @media screen and (max-width: 661px) {
+    .element__description {
+        margin: 0px 21px 31px 15px;
+    }
+  }
+
+
+.element__title {
+    margin: 0px;
+    font-size: 24px;
+    line-height: 29.05px;
+    font-weight: 900;
+    color: #000000;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.element__like-button {
+    width: 22px;
+    height: 19px;
+    background: #FFFFFF url(../images/logo/heart_icon.svg);
+    background-position: center;
+    border: none;
+    cursor: pointer;
+}
+
+
+
+
 
 
 
