@@ -16,9 +16,9 @@ closebutton.addEventListener('click', closePopup);
 
 //Обработка процесса работы кнопки "Сохрани"
 let formElement = document.querySelector('.popup__form');
-
 let nameInput = document.querySelector('.popup__username');
 let jobInput = document.querySelector('.popup__description');
+
 
 function formSubmitHandler (evt) {
     evt.preventDefault(); // Эта строчка отменяет стандартную отправку формы.
@@ -28,6 +28,10 @@ function formSubmitHandler (evt) {
 
     name.textContent = nameInput.value;
     description.textContent = jobInput.value;
+
+    closePopup();
 }
 
 formElement.addEventListener('submit', formSubmitHandler);
+
+
