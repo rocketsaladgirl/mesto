@@ -12,7 +12,7 @@
   /*Расширение от 320px до 768px*/
   @media screen and (max-width: 661px) {
     .profile__info {
-      width: 100%;  
+      width: 100%;
       flex-direction: column;
     }
   }
