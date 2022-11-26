@@ -1,0 +1,13 @@
+.element__description {
+    margin: 0px 21px 31px 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+  /*Расширение от 1024px до 1280px*/
+  
+  /*Расширение от 768px до 1024px*/
+  
+  /*Расширение от 320px до 768px*/

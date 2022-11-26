@@ -1,0 +1,31 @@
+.profile__edit-button {
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    box-sizing: border-box;
+    background: #000000 url(/Users/katelvova/Desktop/praktikum/dev/mesto/images/logo/pen_icon.svg) no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 15px;
+    right: -40px;
+    border: 1px solid #FFFFFF;
+    cursor: pointer;
+  }
+  
+  /*Расширение от 1024px до 1280px*/
+  
+  /*Расширение от 768px до 1024px*/
+  
+  /*Расширение от 320px до 768px*/
+  @media screen and (max-width: 661px) {
+    .profile__edit-button {
+        width: 18px;
+        height: 18px;
+        top: 8px;
+        right: 19px;
+    }  
+  }  
+
+.profile__edit-button:hover {
+    opacity: 0.6;
+}

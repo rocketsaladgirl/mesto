@@ -1,0 +1,19 @@
+.popup__username {
+    width: 100%;
+    margin-bottom: 13px;
+    padding: 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: 400;
+    border: none;
+    outline: none;
+}
+
+/*Расширение от 1024px до 1280px*/
+
+/*Расширение от 768px до 1024px*/
+        
+/*Расширение от 320px до 768px*/

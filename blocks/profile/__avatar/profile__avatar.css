@@ -1,0 +1,18 @@
+.profile__avatar {
+    width: 120px;
+    height: 120px;
+    margin-right: 30px;
+    border-radius: 50%;
+  }
+  
+  /*Расширение от 1024px до 1280px*/
+  
+  /*Расширение от 768px до 1024px*/
+  
+  /*Расширение от 320px до 768px*/
+  @media screen and (max-width: 661px) {
+    .profile__avatar {
+        margin: 0 auto;
+        margin-bottom: 26px;
+    }
+  }

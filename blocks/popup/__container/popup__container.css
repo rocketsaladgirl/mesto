@@ -1,0 +1,37 @@
+.popup__container {
+    width: 430px;
+    height: 330px;
+    position: fixed;
+    top: 195px;
+    left: 425px;
+    right: 425px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+/*Расширение от 1024px до 1280px*/
+@media screen and (max-width: 1279px) {
+    .popup__container {
+        left: 400px;
+    }    
+}
+
+/*Расширение от 768px до 1024px*/
+@media  screen and (max-width: 978px) {
+    .popup__container {
+        width: 330px;
+        left: 320px;
+    }   
+}
+
+@media screen and (max-width: 661px) {
+    .popup__container {
+        width: 282px;
+        height: 332px;
+        top: 123px;
+        left: 19px;
+        right: 19px;
+    }  
+}

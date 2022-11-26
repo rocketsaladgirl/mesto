@@ -1,0 +1,36 @@
+.header {
+    width: 68.75%;
+    max-width: 880px;
+    margin: 45px auto 36px auto;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+  }
+  
+  /*Расширение от 1024px до 1280px*/
+  @media screen and (max-width: 1024px) {
+    .header {
+      width: 90.63%;
+      max-width: 928px;
+      margin: 28px auto 48px auto;
+    }
+  } 
+  
+  /*Расширение от 768px до 1024px*/
+  @media screen and (max-width: 768px) {
+    .header {
+      width: 93.9%;
+      max-width: 720px;
+    }
+  } 
+  
+  /*Расширение от 320px до 768px*/
+  @media screen and (max-width: 320px) {
+    .header {
+      width: 100%;
+      max-width: 320px;
+      margin: 28px auto 38px auto;
+    }
+  } 

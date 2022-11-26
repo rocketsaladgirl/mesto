@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MESTO</title>
-    <link rel="stylesheet" type="text/css" href="vendor/normalize.css">
-    <link rel="stylesheet" type="text/css" href="pages/style.css">
+    <!--link rel="stylesheet" type="text/css" href="vendor/normalize.css"-->
+    <!--link rel="stylesheet" type="text/css" href="pages/style.css"-->
+    <link rel="stylesheet" type="text/css" href="pages/index.css">
 </head>
 <body class="page">
     <div class="page__container">
@@ -17,9 +18,9 @@
             <section class="profile">
                 <div class="profile__info">
                     <img class="profile__avatar" src="images/account_foto.jpeg" alt="фото аккаунта">
-                    <div class="profile__user-block">
+                    <div class="profile__field">
                         <button class="profile__edit-button"></button>
-                        <p class="profile__name">Жак-Ив Кусто</p>
+                        <p class="profile__username">Жак-Ив Кусто</p>
                         <p class="profile__description">Исследователь океана</p>
                     </div>
                 </div>
@@ -74,24 +75,25 @@
             <p class="footer__copyright" lang="en">&copy; 2022 Mesto Russia</p>
         </footer>
     </div>
-    <div id="popup" class="popup">
+    <div class="popup">
         <div class="popup__container">
-            <button class="popup__close-button"></button>
             <div class="popup__content">
                 <h2 class="popup__title">Редактировать профиль</h2>
-                <form action="#" method="get" class="popup__form">
-                    <div class="popup__field">
+                <form class="popup__form" action="#" method="get">
+                    <button class="popup__close-button" type="reset"></button>
+                    <fieldset class="popup__field">
                         <input class="popup__username" type="text" name="username" value="Жак-Ив Кусто"/>
                         <div class="popup__line"></div>
-                    </div>
-                    <div class="popup__field">
-                        <input class="popup__user-description" type="text" name="username" value="Исследователь океана"/>
+                    </fieldset>
+                    <fieldset class="popup__field">
+                        <input class="popup__description" type="text" name="username" value="Исследователь океана"/>
                         <div class="popup__line"></div>
-                    </div>
-                    <button class="popup__submit-button" type="submit">Сохранить</button>
+                    </fieldset>
+                    <button class="popup__save-button" type="submit">Сохранить</button>
                 </form>
             </div>
         </div>
     </div>
+    <script src="../mesto/scripts/script.js"></script>
 </body>
 </html>

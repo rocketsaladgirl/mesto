@@ -1,0 +1,23 @@
+.header__logo {
+    width: 142px;
+    height: 33px;
+    margin-bottom: 41px;
+    background-image: url(/Users/katelvova/Desktop/praktikum/dev/mesto/images/logo/logo.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    box-sizing: border-box;
+  }
+  
+  /*Расширение от 1024px до 1280px*/
+  
+  /*Расширение от 768px до 1024px*/
+  
+  /*Расширение от 320px до 768px*/
+  @media screen and (max-width: 661px) {
+    .header__logo {
+      width: 104px;
+      height: 25px;
+      margin: 0px 188px 31px 27px;
+    }
+  } 
