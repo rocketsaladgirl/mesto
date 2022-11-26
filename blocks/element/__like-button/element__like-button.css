@@ -1,7 +1,7 @@
 .element__like-button {
     width: 22px;
     height: 19px;
-    background: #FFFFFF url(/Users/katelvova/Desktop/praktikum/dev/mesto/images/logo/heart_icon.svg);
+    background: #FFFFFF url(../../../images/logo/heart_icon.svg);
     background-position: center;
     border: none;
     cursor: pointer;

@@ -3,7 +3,7 @@
     height: 24px;
     padding: 0;
     box-sizing: border-box;
-    background: #000000 url(/Users/katelvova/Desktop/praktikum/dev/mesto/images/logo/pen_icon.svg) no-repeat;
+    background: #000000 url(../../../images/logo/pen_icon.svg) no-repeat;
     background-position: center;
     position: absolute;
     top: 15px;
