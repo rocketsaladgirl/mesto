@@ -5,7 +5,6 @@
     margin-bottom: 67px;
     display: grid;
     grid-template-columns: repeat(3, minmax(auto, 282px));
-    grid-template-rows: repeat(2, minmax(auto, 361px));
     column-gap: 17px;
     row-gap: 20px;
     box-sizing: border-box;
@@ -16,7 +15,6 @@
     .elements {
         width: max-content;
         grid-template-columns: repeat(2, minmax(auto, 282px));
-        grid-template-rows: repeat(2, minmax(auto, 361px));
     }   
  }
   
@@ -30,6 +28,5 @@
         max-width: 282px;
         margin-bottom: 48px;
         grid-template-columns: 282px;
-        grid-template-rows: repeat(6, minmax(auto, 361px));
     }
   }

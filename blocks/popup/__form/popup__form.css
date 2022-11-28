@@ -1,5 +1,6 @@
 .popup__form {
-    margin-bottom: 37px;
+    margin: 0;
+    padding: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -10,8 +11,3 @@
 /*Расширение от 768px до 1024px*/
         
 /*Расширение от 320px до 768px*/
-@media screen and (max-width: 661px) {
-    .popup__form {
-        margin-bottom: 25px;
-    }   
-}

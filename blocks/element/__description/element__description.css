@@ -1,9 +1,12 @@
 .element__description {
-    margin: 0px 21px 31px 15px;
+    max-width: 246px;
+    margin: 0px 15px 25px 21px;
+    padding: 0;
+    padding-right: 5px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-items: baseline;
 }
 
   /*Расширение от 1024px до 1280px*/

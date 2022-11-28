@@ -1,6 +1,7 @@
 .profile__username {
-    margin: 0px;
-    margin-bottom: 16px;
+    max-width: 294px;
+    margin: 0;
+    margin-right: 18px;
     padding: 0;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -10,7 +11,6 @@
     font-weight: 500;
     text-align: left;
     border: none;
-    box-sizing: border-box;
   }
   
   /*Расширение от 1024px до 1280px*/
@@ -20,7 +20,8 @@
   /*Расширение от 320px до 768px*/
   @media screen and (max-width: 661px) {
     .profile__username {
-        margin-bottom: 14px;
+        max-width: 189px;
+        margin-right: 10px;
         font-size: 27px;
         line-height: 32.68px;
         text-align: center;

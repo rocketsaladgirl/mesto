@@ -6,10 +6,9 @@
     left: 0;
     background-color: rgba(0, 0, 0, 0.5);
     display: none;
-}
-
-.popup_opened {
-    display: block;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 /*Расширение от 1024px до 1280px*/

@@ -4,7 +4,7 @@
     margin-bottom: 41px;
     background-image: url(../../../images/logo/logo.svg);
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     background-position: center;
     box-sizing: border-box;
   }
@@ -16,8 +16,8 @@
   /*Расширение от 320px до 768px*/
   @media screen and (max-width: 661px) {
     .header__logo {
-      width: 104px;
-      height: 25px;
-      margin: 0px 188px 31px 27px;
+      width: 103.74px;
+      height: 24.4px;
+      margin: 0px 189.26px 31.6px 27px;
     }
-  } 
+  }

@@ -1,11 +1,9 @@
-.popup__line {
-    width: 100%;
-    border: 1px solid #000000;
-    opacity: 0.2;
+.popup_opened {
+    display: flex;
 }
 
 /*Расширение от 1024px до 1280px*/
 
 /*Расширение от 768px до 1024px*/
-        
+
 /*Расширение от 320px до 768px*/
