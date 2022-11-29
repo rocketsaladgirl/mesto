@@ -1,7 +1,5 @@
 .element__like-button_active {
     background: url(../../../../images/logo/heart_icon_active.svg);
-    background-position: center;
-    border: none;
 }
 
 

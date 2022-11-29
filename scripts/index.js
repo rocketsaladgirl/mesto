@@ -36,6 +36,4 @@ closebutton.addEventListener('click', closePopup);
 
 formElement.addEventListener('submit', formSubmitHandler);
 
-formSubmit.addEventListener('click', openPopup);
-
 
