@@ -3,8 +3,8 @@
     height: 32px;
     padding: 0;
     position: absolute;
-    top: 155px;
-    right: 385px;
+    top: -40px;
+    left: 440px;
     background: url(../../../images/logo/close_icon.svg);
     background-position: center;
     background-size: cover;
@@ -14,38 +14,21 @@
 }
 
 /*Расширение от 1024px до 1280px*/
-@media screen and (max-width: 1246px) {
-    .popup__close-button {
-        right: 280px;
-    }
-}
 
 /*Расширение от 768px до 1024px*/
 @media screen and (max-width: 978px) {
     .popup__close-button {
         width: 20px;
         height: 20px;
-        left: 551px;
+        left: 310px;
+        top: -36px;
     }
 }
         
 /*Расширение от 320px до 768px*/
-@media screen and (max-width: 660px) {
+@media screen and (max-width: 661px) {
     .popup__close-button {
-        left: 481px;
-    }
-}
-
-@media screen and (max-width: 500px) {
-    .popup__close-button {
-        left: 300px;
-    }
-}
-
-@media screen and (max-width: 323px) {
-    .popup__close-button {
-        top: 165px;
-        left: 281px;
+        left: 261px;
     }
 }
 
