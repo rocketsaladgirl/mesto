@@ -14,9 +14,16 @@
 }
 
 /*Расширение от 1024px до 1280px*/
-@media screen and (max-width: 1279px) {
+@media screen and (max-width: 1247px) {
     .popup__close-button {
-        right: 265px;
+        top: 135px;
+    }
+}
+
+@media screen and (max-width: 1246px) {
+    .popup__close-button {
+        top: 80px;
+        right: 280px;
     }
 }
 
@@ -25,13 +32,26 @@
     .popup__close-button {
         width: 20px;
         height: 20px;
-        top: 165px;
+        top: 90px;
         left: 551px;
     }
 }
         
 /*Расширение от 320px до 768px*/
 @media screen and (max-width: 660px) {
+    .popup__close-button {
+        left: 481px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .popup__close-button {
+        left: 300px;
+    }
+    
+}
+
+@media screen and (max-width: 323px) {
     .popup__close-button {
         top: 100px;
         left: 281px;
