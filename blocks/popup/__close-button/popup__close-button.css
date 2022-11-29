@@ -3,7 +3,7 @@
     height: 32px;
     padding: 0;
     position: absolute;
-    top: 155px;
+    top: 145px;
     right: 385px;
     background: url(../../../images/logo/close_icon.svg);
     background-position: center;
@@ -33,7 +33,7 @@
 /*Расширение от 320px до 768px*/
 @media screen and (max-width: 660px) {
     .popup__close-button {
-        top: 87px;
+        top: 100px;
         left: 281px;
     }
 }
