@@ -1,6 +1,7 @@
 .element {
     width: 100%;
     max-width: 282px;
+    position: relative;
     display: flex;
     flex-direction: column;
     background-color: #FFF;

@@ -26,12 +26,16 @@
                 <button class="profile__add-button" type="button"></button>     
             </section>
             <section class="elements">
+
+            </section>
+            <!--section class="elements">
                 <article class="element">
                     <img class="element__image" src="./images/baikal_foto.jpeg" alt="фото озера Байкал">
                     <div class="element__description">
                         <h2 class="element__title">Озеро Байкал</h2>
                         <button class="element__like-button" type="button"></button>
                     </div>
+                    <button class="element__trash-button" type="button"></button>
                 </article>
                 <article class="element">
                     <img class="element__image" src="./images/kamchatka_foto.jpeg" alt="фото вулкана на Камчатке">
@@ -39,6 +43,7 @@
                         <h2 class="element__title">Камчатка</h2>
                         <button class="element__like-button" type="button"></button>
                     </div>
+                    <button class="element__trash-button" type="button"></button>
                 </article>
                 <article class="element">
                     <img class="element__image" src="./images/moscow_foto.jpeg" alt="фото собора в Москве">
@@ -46,6 +51,7 @@
                         <h2 class="element__title">Москва</h2>
                         <button class="element__like-button" type="button"></button>
                     </div>
+                    <button class="element__trash-button" type="button"></button>
                 </article>
                 <article class="element">
                     <img class="element__image" src="./images/sochi_foto.jpeg" alt="фото порта в Сочи">
@@ -53,6 +59,7 @@
                         <h2 class="element__title">Сочи</h2>
                         <button class="element__like-button" type="button"></button>
                     </div>
+                    <button class="element__trash-button" type="button"></button>
                 </article>
                 <article class="element">
                     <img class="element__image" src="./images/spb_foto.jpeg" alt="фото памятника в Санкт-Петербурге">
@@ -60,6 +67,7 @@
                         <h2 class="element__title">Санкт-Петербург</h2>
                         <button class="element__like-button" type="button"></button>
                     </div>
+                    <button class="element__trash-button" type="button"></button>
                 </article>
                 <article class="element">
                     <img class="element__image" src="./images/vladivostok_foto.jpeg" alt="фото маяка во Владивостоке">
@@ -67,13 +75,27 @@
                         <h2 class="element__title">Владивосток</h2>
                         <button class="element__like-button" type="button"></button>
                     </div>
+                    <button class="element__trash-button" type="button"></button>
                 </article>
-            </section>
+            </section-->
         </main>
+
         <footer class="footer">
             <p class="footer__copyright" lang="en">&copy; 2022 Mesto Russia</p>
         </footer>
     </div>
+
+    <template id="element-template">
+        <article class="element">
+            <img class="element__image" alt="">
+            <div class="element__description">
+                <h2 class="element__title"></h2>
+                <button class="element__like-button" type="button"></button>
+            </div>
+            <button class="element__trash-button" type="button"></button>
+        </article>
+    </template>
+
     <div class="popup">
         <div class="popup__container">
             <button class="popup__close-button" type="button"></button>
@@ -90,7 +112,33 @@
                 <button class="popup__save-button" type="submit">Сохранить</button>
             </form>
         </div>
+    </div>    
+
+    <div class="add-form">
+        <div class="add-form__container">
+            <button class="add-form__close-button" type="button"></button>
+            <h2 class="popup__title">Новое место</h2>
+            <form class="popup__form" name="foto-information" action="#" method="get">
+                <fieldset class="popup__field">
+                    <input class="popup__input popup__input_type_designation" 
+                    type="text" name="text" placeholder="Название" value="">
+                </fieldset>
+                <fieldset class="popup__field">   
+                    <input class="popup__input popup__input_type_link" 
+                    type="text" name="text" placeholder="Ссылка на картинку" value="">
+                </fieldset>
+                <button class="popup__save-button" type="submit">Создать</button>
+            </form>
+        </div>
     </div>
+
+    <!--div class="big-image">
+        <figure class="big-image__container">
+            <img class="big-image__place" alt="">
+            <figcaption class="big-image__title"></figcaption>
+        </figure>
+    </div-->
+
     <script src="./scripts/index.js"></script>
 </body>
 </html>

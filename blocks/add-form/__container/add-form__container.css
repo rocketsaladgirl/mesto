@@ -1,0 +1,25 @@
+.add-form__container {
+    width: 430px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    background-color: #FFF;
+    border-radius: 10px;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
+}
+
+/*Расширение от 1024px до 1280px*/
+
+/*Расширение от 768px до 1024px*/
+@media  screen and (max-width: 978px) {
+    .add-form__container {
+        width: 330px;
+    } 
+}
+
+@media screen and (max-width: 661px) {
+    .add-form__container {
+        width: 282px;
+    }
+}
