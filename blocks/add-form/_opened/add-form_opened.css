@@ -1,5 +1,7 @@
 .add-form_opened {
     display: flex;
+    visibility: visible;
+    opacity: 1;
 }
 
 /*Расширение от 1024px до 1280px*/
