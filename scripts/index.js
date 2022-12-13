@@ -65,15 +65,7 @@ function renderCard({ name, link}) {
   };
 
   elementInfo.forEach(renderCard);
-//function render() {
-  //elementInfo.forEach(renderCard);
-//};
 
-//render();  
-
-const addFormArea = document.querySelector('.add-form__area');
-let titleInput = document.querySelector('.popup__input_type_title');
-let linkInput = document.querySelector('.popup__input_type_link');
 
 //Функция заполнения формы add-form
 function formSaveHandler (evt) {
@@ -87,9 +79,6 @@ function formSaveHandler (evt) {
     renderCard(createCard);
     closeAddForm();
 };
-
-addFormArea.addEventListener('submit', formSaveHandler);
-
 
 
 //Обработка процесса открытия и закрытия вкладки popup 
@@ -111,6 +100,10 @@ let userDescription = document.querySelector('.profile__description');
 
 let bigImageLink = document.querySelector('.big-image__place');
 let bigImageTitle = document.querySelector('.big-image__title');
+
+const addFormArea = document.querySelector('.add-form__area');
+let titleInput = document.querySelector('.popup__input_type_title');
+let linkInput = document.querySelector('.popup__input_type_link');
 
 
 //Функции открытия и закрытия popup, add-form и big-image
@@ -163,7 +156,7 @@ closeBigImageButton.addEventListener('click', closeBigImage);
 
 formElement.addEventListener('submit', formSubmitHandler);
 
-addForm.addEventListener('submit', formSaveHandler);
+addFormArea.addEventListener('submit', formSaveHandler);
 
 
 
