@@ -102,8 +102,8 @@ let bigImageLink = document.querySelector('.big-image__place');
 let bigImageTitle = document.querySelector('.big-image__title');
 
 const addFormArea = document.querySelector('.add-form__area');
-let titleInput = document.querySelector('.popup__input_type_title');
-let linkInput = document.querySelector('.popup__input_type_link');
+let titleInput = document.querySelector('.add-form__input_type_title');
+let linkInput = document.querySelector('.add-form__input_type_link');
 
 
 //Функции открытия и закрытия popup, add-form и big-image
