@@ -1,0 +1,13 @@
+.add-form__area {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*Расширение от 1024px до 1280px*/
+
+/*Расширение от 768px до 1024px*/
+        
+/*Расширение от 320px до 768px*/

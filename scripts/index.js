@@ -26,8 +26,73 @@ const initialCards = [
     }
   ];
 
+//Процесс добавления карточек из массива, удаления из массива, активации кнопки лайк, поп-ап картинки
+const elementsContainer = document.querySelector('.elements');
+const elementTemplate = document.querySelector('#element-template').content;
 
-//Обработка процесса открытия и закрытия вкладки popup и add-form
+const elementInfo = initialCards.map(function (item) {
+  return {
+    name: item.name,
+    link: item.link,
+  };
+});
+
+//Добавление карточки из массива
+function renderCard({ name, link}) {
+    const elementCard = elementTemplate.querySelector('.element').cloneNode(true);
+    elementCard.querySelector('.element__image').src = link;
+    elementCard.querySelector('.element__title').textContent = name;  
+
+ //Работа кнопки "лайк"   
+    elementCard.querySelector('.element__like-button').addEventListener('click', function (event){
+      event.target.classList.toggle('element__like-button_active');
+    });
+
+//Работа кнопки "урна"    
+    elementCard.querySelector('.element__trash-button').addEventListener('click', function() {
+      elementCard.remove();
+    });
+
+//Поп-ап карточки
+    elementCard.querySelector('.element__image').addEventListener('click', () => {
+        bigImage.classList.add('big-image_opened');
+
+        bigImageLink.src = link;
+        bigImageTitle.textContent = name;
+    });
+
+    elementsContainer.prepend(elementCard);
+  };
+
+  elementInfo.forEach(renderCard);
+//function render() {
+  //elementInfo.forEach(renderCard);
+//};
+
+//render();  
+
+const addFormArea = document.querySelector('.add-form__area');
+let titleInput = document.querySelector('.popup__input_type_title');
+let linkInput = document.querySelector('.popup__input_type_link');
+
+//Функция заполнения формы add-form
+function formSaveHandler (evt) {
+    evt.preventDefault();
+
+    const createCard = {
+        name: titleInput.value,
+        link: linkInput.value,
+    };
+
+    renderCard(createCard);
+    closeAddForm();
+};
+
+addFormArea.addEventListener('submit', formSaveHandler);
+
+
+
+//Обработка процесса открытия и закрытия вкладки popup 
 const popup = document.querySelector('.popup');
 const addForm = document.querySelector('.add-form');
 const bigImage = document.querySelector('.big-image');
@@ -44,11 +109,9 @@ let jobInput = document.querySelector('.popup__input_type_description');
 let userProfile = document.querySelector('.profile__username');
 let userDescription = document.querySelector('.profile__description');
 
-let designationInput = document.querySelector('.popup__input_type_designation');
-let linkInput = document.querySelector('.popup__input_type_link');
-
 let bigImageLink = document.querySelector('.big-image__place');
 let bigImageTitle = document.querySelector('.big-image__title');
+
 
 //Функции открытия и закрытия popup, add-form и big-image
 function openPopup() {
@@ -74,6 +137,7 @@ function closeBigImage() {
     bigImage.classList.remove('big-image_opened')
 };
 
+
 //Функция заполнения формы popup
 function formSubmitHandler (evt) {
     evt.preventDefault(); // Эта строчка отменяет стандартную отправку формы.
@@ -84,50 +148,6 @@ function formSubmitHandler (evt) {
     closePopup();
 };
 
-
-//Процесс добавления карточек из массива, удаления из массива, активации кнопки лайк, поп-ап картинки
-const elementsContainer = document.querySelector('.elements');
-const elementTemplate = document.querySelector('#element-template').content;
-
-const elementInfo = initialCards.map(function (item) {
-  return {
-    name: item.name,
-    link: item.link
-  };
-});
-
-function renderCard({ name, link}) {
-    const elementCard = elementTemplate.querySelector('.element').cloneNode(true);
-    elementCard.querySelector('.element__image').src = link;
-    elementCard.querySelector('.element__title').textContent = name;  
-
- //Работа кнопки "лайк"   
-    elementCard.querySelector('.element__like-button').addEventListener('click', function (event){
-      event.target.classList.toggle('element__like-button_active');
-    });
-
-//Работа кнопки "урна"    
-    elementCard.querySelector('.element__trash-button').addEventListener('click', function() {
-      elementCard.remove();
-    });
-
-//Поп-ап карточки
-    elementCard.querySelector('.element__image').addEventListener('click', () => {
-        bigImage.classList.add('big-image_opened');
-
-        bigImageLink.src = link;
-        bigImageTitle.textContent = name;
-    });
-
-    elementsContainer.prepend(elementCard);
-  }
-
-
-function render() {
-  elementInfo.forEach(renderCard);
-}
-
-render();
 
 
 //Работа кнопок
@@ -142,6 +162,9 @@ closeformbutton.addEventListener('click', closeAddForm);
 closeBigImageButton.addEventListener('click', closeBigImage);
 
 formElement.addEventListener('submit', formSubmitHandler);
+
+addForm.addEventListener('submit', formSaveHandler);
+
 
 
 
