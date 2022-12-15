@@ -1,4 +1,4 @@
-.big-image__container {
+.popup__img-container {
     width: 816px;
     position: relative;
     display: flex;
@@ -10,7 +10,7 @@
 
 /*Расширение от 1024px до 1280px*/
 @media screen and (max-width: 1270px) {
-    .big-image__container {
+    .popup__img-container {
         width: 433px;
     } 
 }
@@ -18,13 +18,13 @@
 
 /*Расширение от 768px до 1024px*/
 @media  screen and (max-width: 978px) {
-    .big-image__container {
+    .popup__img-container {
         width: 333px;
     }
 }
 
 @media screen and (max-width: 661px) {
-    .big-image__container {
+    .popup__img-container {
         width: 240px;
     }
 }

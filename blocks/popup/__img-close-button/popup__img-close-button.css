@@ -1,10 +1,11 @@
-.add-form__close-button {
+.popup__img-close-button {
     width: 32px;
     height: 32px;
     padding: 0;
     position: absolute;
     top: -40px;
-    left: 440px;
+    left: 825px;
+    right: 0;
     background: url(../../../images/logo/close_icon.svg);
     background-position: center;
     background-size: cover;
@@ -14,24 +15,30 @@
 }
 
 /*Расширение от 1024px до 1280px*/
+@media screen and (max-width: 1270px) {
+    .popup__img-close-button {
+        left: 440px;
+    }
+    
+}
 
 /*Расширение от 768px до 1024px*/
 @media screen and (max-width: 978px) {
-    .add-form__close-button {
+    .popup__img-close-button {
         width: 20px;
         height: 20px;
-        left: 310px;
-        top: -36px;
+        left: 340px;
+        top: -35px;
     }
 }
         
 /*Расширение от 320px до 768px*/
 @media screen and (max-width: 661px) {
-    .add-form__close-button {
-        left: 261px;
+    .popup__img-close-button {
+        left: 220px;
     }
 }
 
-.add-form__close-button:hover {
+.popup__img-close-button:hover {
     opacity: 0.6;
 }

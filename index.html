@@ -34,7 +34,18 @@
         </footer>
     </div>
 
-    <div class="popup">
+        <template id="element-template">
+        <article class="element">
+            <img class="element__image" alt="">
+            <div class="element__description">
+                <h2 class="element__title"></h2>
+                <button class="element__like-button" type="button"></button>
+            </div>
+            <button class="element__trash-button" type="button"></button>
+        </article>
+    </template>
+
+    <div class="popup popup__edit-form">
         <div class="popup__container">
             <button class="popup__close-button" type="button"></button>
             <h2 class="popup__title">Редактировать профиль</h2>
@@ -52,42 +63,31 @@
         </div>
     </div>
 
-    <div class="add-form">
-        <div class="add-form__container">
-            <button class="add-form__close-button" type="button"></button>
-            <h2 class="add-form__title">Новое место</h2>
-            <form class="add-form__area" name="foto-information" action="#" method="get">
-                <fieldset class="add-form__field">
-                    <input class="add-form__input add-form__input_type_title" 
+    <div class="popup popup__add-form">
+        <div class="popup__container">
+            <button class="popup__close-button" type="button"></button>
+            <h2 class="popup__title">Новое место</h2>
+            <form class="popup__form popup__add-area" name="user-information" action="#" method="get">
+                <fieldset class="popup__field">
+                    <input class="popup__input popup__input_type_title" 
                     type="text" name="text" placeholder="Название" value="">
                 </fieldset>
-                <fieldset class="add-form__field">   
-                    <input class="add-form__input add-form__input_type_link" 
+                <fieldset class="popup__field">   
+                    <input class="popup__input popup__input_type_link" 
                     type="text" name="text" placeholder="Ссылка на картинку" value="">
                 </fieldset>
-                <button class="add-form__save-button" type="submit">Создать</button>
+                <button class="popup__save-button" type="submit">Создать</button>
             </form>
         </div>
     </div>
 
-    <div class="big-image">
-        <figure class="big-image__container">
-            <button class="big-image__close-button" type="button"></button>
-            <img class="big-image__place" alt="">
-            <figcaption class="big-image__title"></figcaption>
+    <div class="popup popup__img">
+        <figure class="popup__img-container">
+            <button class="popup__img-close-button popup__close-button" type="button"></button>
+            <img class="popup__img-place" alt="">
+            <figcaption class="popup__img-title"></figcaption>
         </figure>
     </div>
-
-    <template id="element-template">
-        <article class="element">
-            <img class="element__image" alt="">
-            <div class="element__description">
-                <h2 class="element__title"></h2>
-                <button class="element__like-button" type="button"></button>
-            </div>
-            <button class="element__trash-button" type="button"></button>
-        </article>
-    </template>
 
     <script src="./scripts/index.js"></script>
 </body>

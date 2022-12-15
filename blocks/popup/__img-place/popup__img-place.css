@@ -1,4 +1,4 @@
-.big-image__place {
+.popup__img-place {
     width: 100%;
     max-width: 816px;
     height: 540px;
@@ -12,14 +12,14 @@
 
 /*Расширение от 1024px до 1280px*/
 @media screen and (max-width: 1270px) {
-    .big-image__place {
+    .popup__img-place {
         width: 433px;
     }
 }
 
 /*Расширение от 768px до 1024px*/
 @media  screen and (max-width: 978px) {
-    .big-image__place {
+    .popup__img-place {
         max-width: 333px;
         height: 450px;
     }
@@ -27,14 +27,9 @@
         
 /*Расширение от 320px до 768px*/
 @media screen and (max-width: 661px) {
-    .big-image__place {
+    .popup__img-place {
         max-width: 240px;
         height: 299px;
     }
 }
-
-.popup__field:last-of-type {
-    margin-bottom: 0;
-}
-
 
