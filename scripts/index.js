@@ -101,9 +101,9 @@ function formSaveHandler (evt) {
 
 //Попап окна
 const popupWindow = document.querySelectorAll('.popup'); //исправлено
-const popupEditForm = document.querySelector('.popup__editform'); //исправлено
-const popupAddForm = document.querySelector('.popup__addform'); //исправлено
-const popupOpenImage = document.querySelector('.popup__imgform'); //исправлено
+const popupEditForm = document.querySelector('.popup__edit'); //исправлено
+const popupAddForm = document.querySelector('.popup__add'); //исправлено
+const popupOpenImage = document.querySelector('.popup__image'); //исправлено
 
 //Кнопки закрытия окон
 const popupCloseButtons = document.querySelectorAll('.popup__close-button'); //исправлено
