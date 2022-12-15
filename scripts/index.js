@@ -84,18 +84,18 @@ const createCard = (cardLink, cardTitle) => {
   });
 
 //Функция заполнения формы add-form
-function formSaveHandler (evt) {
+function submitAddCardForm (evt) {
     evt.preventDefault();
 
-        cardLink =  popupAddFormLinkInput.value;
-        cardTitle = popupAddFormTitleInput.value;
+      const cardLink =  popupAddFormLinkInput.value;
+      const cardTitle = popupAddFormTitleInput.value;
 
     addCard(createCard(cardLink, cardTitle));
 
     closePopupWindow(popupAddForm);
 
-    popupAddFormTitleInput.value = popupAddFormTitleInput.textContent;
-    popupAddFormLinkInput.value = popupAddFormLinkInput.textContent;
+    popupAddFormTitleInput.value = "";
+    popupAddFormLinkInput.value = "";
 };
 
 
@@ -150,7 +150,7 @@ formAddOpenButton.addEventListener('click', function() {
 });
 
 //Функция заполнения формы popup
-function formSubmitHandler (evt) {
+function submitEditProfileForm (evt) {
     evt.preventDefault(); // Эта строчка отменяет стандартную отправку формы.
 
     userProfile.textContent = nameInput.value;
@@ -173,9 +173,9 @@ popupCloseButtons.forEach(btn => btn.addEventListener('click', () => {
 }));
 
 
-popupEditElement.addEventListener('submit', formSubmitHandler);// работает
+popupEditElement.addEventListener('submit', submitEditProfileForm);// работает
 
-popupAddFormArea.addEventListener('submit', formSaveHandler); //работает
+popupAddFormArea.addEventListener('submit', submitAddCardForm); //работает
 
 
 
