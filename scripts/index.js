@@ -105,6 +105,7 @@ const popupEditForm = document.querySelector('.popup_edit-form'); //исправ
 const popupAddForm = document.querySelector('.popup_add-form'); //исправлено
 const popupOpenImage = document.querySelector('.popup_image-form'); //исправлено
 
+
 //Кнопки закрытия окон
 const popupCloseButtons = document.querySelectorAll('.popup__close-button'); //исправлено
 
@@ -113,7 +114,7 @@ const profileEditOpenButton = document.querySelector('.profile__edit-button');//
 const formAddOpenButton = document.querySelector('.profile__add-button');//исправлено
 
 //Элементы формы edit-form
-const popupEditElement = document.querySelector('.popup__form');
+const popupEditArea = document.querySelector('.popup__form-area');
 const nameInput = document.querySelector('.popup__input_type_name');
 const jobInput = document.querySelector('.popup__input_type_description');
 const userProfile = document.querySelector('.profile__username');
@@ -133,6 +134,7 @@ const popupImageTitle = document.querySelector('.popup__img-title');
 //Функция открытия popup окон
 function openPopupWindow(item) {
     item.classList.add('popup_opened');
+    document.addEventListener('keydown', closePopupWindowEsc); //добавляем возможность закрыть окно по нажатию на ESC
 };
 
 //Работа кнопок открытия окон popup
@@ -164,16 +166,34 @@ function submitEditProfileForm (evt) {
 //Функция закрытия popup окон
 function closePopupWindow(item) {
     item.classList.remove('popup_opened');
+    document.removeEventListener('keydown',closePopupWindowEsc); //удаляем возможность закрыть окно по нажатию на ESC
 };
 
-
+//Создание общего правила для всех кнопок "закрыть(крестик)"
 popupCloseButtons.forEach(btn => btn.addEventListener('click', () => {
     const popup = btn.closest('.popup');
     closePopupWindow(popup);
 }));
 
+//Функция закрытия по нажатию на ESC
+function closePopupWindowEsc(evt) {
+    if (evt.key === 'Escape') {
+        const popupOpenWindow = document.querySelector('.popup_opened'); //ищем все блоки с popup_opened
+        closePopupWindow(popupOpenWindow);
+    };
+};
 
-popupEditElement.addEventListener('submit', submitEditProfileForm);// работает
+//Функция закрытия по нажатию на оверлей
+popupWindow.forEach((popups) => {
+    popups.addEventListener('mousedown', (evt) => { 
+        if (evt.target.classList.contains('popup_opened')) { 
+            closePopupWindow(popups); 
+        };
+    });
+});
+
+
+popupEditArea.addEventListener('submit', submitEditProfileForm);// работает
 
 popupAddFormArea.addEventListener('submit', submitAddCardForm); //работает
 
