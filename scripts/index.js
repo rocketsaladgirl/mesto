@@ -1,31 +1,3 @@
-//Массив с карточками
-const initialCards = [
-    {
-      name: 'Архыз',
-      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg'
-    },
-    {
-      name: 'Челябинская область',
-      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/chelyabinsk-oblast.jpg'
-    },
-    {
-      name: 'Иваново',
-      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/ivanovo.jpg'
-    },
-    {
-      name: 'Камчатка',
-      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg'
-    },
-    {
-      name: 'Холмогорский район',
-      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kholmogorsky-rayon.jpg'
-    },
-    {
-      name: 'Байкал',
-      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg'
-    },
-  ];
-
 const elementsContainer = document.querySelector('.elements');
 
 //Создаем новый массив из данного
@@ -36,11 +8,12 @@ const elementInfo = initialCards.map(function (item) {
   };
 });
 
+//берем элементы из блока template
+const elementTemplate = document.querySelector('#element-template').content;
+
 //Добавление карточки из массива
 // функция создаёт карточки
 const createCard = (cardLink, cardTitle) => {
-    //берем элементы из блока template
-    const elementTemplate = document.querySelector('#element-template').content;
     //клонируем шаблон карточки из template
     const elementCard = elementTemplate.querySelector('.element').cloneNode(true);
 
@@ -129,6 +102,9 @@ const popupAddFormLinkInput = document.querySelector('.popup__input_type_link');
 const popupImageLink = document.querySelector('.popup__img-place');
 const popupImageTitle = document.querySelector('.popup__img-title');
 
+//Элементы для блокировки кнопки
+const inputElementFields = Array.from(popupAddFormArea.querySelectorAll('.popup__input'));
+const buttonActive = popupAddFormArea.querySelector('.popup__save-button');
 
 //Функции открытия и закрытия popup, add-form и image
 //Функция открытия popup окон
@@ -149,6 +125,7 @@ profileEditOpenButton.addEventListener('click', function() {
 //add-form
 formAddOpenButton.addEventListener('click', function() {
     openPopupWindow(popupAddForm);
+    toggleButtonState(inputElementFields, buttonActive, validationConfig);
 });
 
 //Функция заполнения формы popup
@@ -196,6 +173,8 @@ popupWindow.forEach((popups) => {
 popupEditArea.addEventListener('submit', submitEditProfileForm);// работает
 
 popupAddFormArea.addEventListener('submit', submitAddCardForm); //работает
+
+enableValidation(validationConfig);
 
 
 

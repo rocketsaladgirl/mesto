@@ -34,7 +34,7 @@
         </footer>
     </div>
 
-        <template id="element-template">
+    <template id="element-template">
         <article class="element">
             <img class="element__image" alt="">
             <div class="element__description">
@@ -53,9 +53,7 @@
                 <fieldset class="popup__field">
                     <input class="popup__input popup__input_type_name" id="username-input"
                     type="text" name="text" placeholder="Имя пользователя" value="" minlength="2" maxlength="40" required>
-                    <span class="username-input-error popup__input-error"></span>
-                </fieldset>
-                <fieldset class="popup__field">   
+                    <span class="username-input-error popup__input-error"></span>  
                     <input class="popup__input popup__input_type_description" id="userdescription-input"
                     type="text" name="text" placeholder="Профессия пользователя" value="" minlength="2" maxlength="200" required>
                     <span class="userdescription-input-error popup__input-error"></span>
@@ -74,8 +72,6 @@
                     <input class="popup__input popup__input_type_title" id="phototitle-input"
                     type="text" name="text" placeholder="Название" value="" minlength="2" maxlength="30" required>
                     <span class="phototitle-input-error popup__input-error"></span>
-                </fieldset>
-                <fieldset class="popup__field">   
                     <input class="popup__input popup__input_type_link" id="photolink-input"
                     type="url" name="text" placeholder="Ссылка на картинку" value="" required>
                     <span class="photolink-input-error popup__input-error"></span>
@@ -93,6 +89,7 @@
         </figure>
     </div>
     <script src="./scripts/validate.js"></script>
+    <script src="./scripts/cards.js"></script>
     <script src="./scripts/index.js"></script>
 </body>
 </html>
